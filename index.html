@@ -4,20 +4,38 @@
 <body>
     <div id="header" class="center">
         <br/>
-        <img src="dragon.png" style="max-width: 300px;"/>
-        <div id="title"><h1>The Doughy Dragon</h1></div>
+        <img src="dragon.png" style="max-width: 200px; margin-bottom: -50px;"/>
+        <div id="title"><h1 style="margin-bottom: 0px;">The Doughy Dragon</h1></div>
+        <hr style="margin-bottom: 25px;">
 
         <div id="nav">
             <ul>
+                <li id="sellist"><a class="navlink" id="selected" href="index.html">Home</a></li>
+                <li><a class="navlink" href="about.html">About</a></li>
+                <li><a class="navlink" href="contact.html">Contact</a></li>
+                <li><a class="navlink" href="gallery.html">Gallery</a></li>
+                <li><a class="navlink" href="support.html">Support</a></li>
             </ul>
         </div>
-        <hr>
+
+        <!--<div style="min-width: 200px; min-height: 200px; background-image: url('cake.png')"></div>-->
+
 
         <br/>
 
     </div>
 
-    <h3 class="center">Site currently under construction. Please come back later for delicious goodness!<h3>
+
+
+    <div style="margin-bottom: 100px"></div>
+
+    <h3 class="center">
+        <img class="icon" src="smiley.png" alt="smiley face">
+        <img class="icon" src="const.png" alt="construction sign">
+         Site currently under construction. Please come back later for delicious goodness!
+        <img class="icon" src="const.png" alt="construction sign">
+        <img class="icon" src="smiley.png" alt="smiley face">
+    </h3>
 
 
 
@@ -26,8 +44,10 @@
 <style>
 
     body {
-        background-color: #e58277;
+        background-color: #68B04D;
         font-size: 18px;
+        margin: 0px;
+        padding: 0px;
     }
 
     #title {
@@ -35,11 +55,56 @@
     }
 
     #nav {
+        list-style-type: none;
+        font-family: "Comic Sans MS", cursive;
+        background-color: #D0F53D;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    }
 
+    #nav ul {
+        min-height: 40px;
+        text-align: center;
+    }
+
+    #nav ul li {
+        display: inline-block;
+        padding: 40px 5%;
+        margin-top: -20px;
+        list-style-type: none;
+    }
+
+    .navlink {
+        text-decoration: none;
+        color: black;
+    }
+
+    #selected {
+        text-decoration: none;
+        color: blue;
+    }
+
+    #sellist {
+        background: url('cake.gif')!important;
+        background-size: 130px 110px!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+        background-clip: border-box!important;
+
+        padding: 60px 40px;
+        //margin: -20px -20px;
     }
 
     #header {
+        background-color:
+    }
 
+
+
+    .icon {
+        max-width: 30px;
+        max-height: 30px;
     }
 
     .nav-bar {
