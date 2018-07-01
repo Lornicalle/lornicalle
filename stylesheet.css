@@ -1,0 +1,83 @@
+body {
+    background-color: #68B04D;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#title {
+    border-bottom: 1px grey;
+}
+
+#nav {
+    list-style-type: none;
+    font-family: "Comic Sans MS", cursive;
+    background-color: #D0F53D;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+#nav ul {
+    text-align: center;
+}
+
+#nav ul li {
+    display: inline-block;
+    padding: 20px 5%;
+    //margin-top: -20px;
+    list-style-type: none;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+}
+
+#selected {
+    text-decoration: none;
+    color: blue;
+}
+
+#sellist {
+    background: url('cakeShadow.png')!important;
+    background-size: 100px 80px!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-clip: border-box!important;
+
+    padding: 40px 40px;
+    //margin: -20px -20px;
+}
+
+#header {
+    background-color:
+}
+
+
+
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.link {
+    color: blue;
+}
+
+.link:visited {
+    color: purple;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: black;
+}
