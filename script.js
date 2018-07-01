@@ -29,5 +29,5 @@ function includeHTML() {
 
 function SetHeader(name) {
     console.log("setting header to " + name + "...");
-    document.getElementById(name).setAttribute("id", "sellist");
+    document.getElementById(name.split('.')[0]).setAttribute("id", "sellist");
 }
