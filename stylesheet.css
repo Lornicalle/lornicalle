@@ -81,3 +81,8 @@ body {
     width: 50%;
     color: black;
 }
+
+.footer {
+    background-color: darkgrey;
+    color: white;
+}
