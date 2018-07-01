@@ -29,9 +29,9 @@ function includeHTML() {
 
 function SetHeader(name) {
     if (name === "home") {
-        document.getElementById("home").id = "sellist";
+        document.getElementById('home').id = 'sellist';
     }
     if (name === "about") {
-        document.getElementById("about").id = "sellist";
+        document.getElementById('about').id = 'sellist';
     }
 }
