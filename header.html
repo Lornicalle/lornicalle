@@ -6,7 +6,7 @@
 
     <div id="nav">
         <ul>
-            <li id="home"><a class="navlink" href="index.html">Home</a></li>
+            <li id="index"><a class="navlink" href="index.html">Home</a></li>
             <li id="about"><a class="navlink" href="about.html">About</a></li>
             <li id="contact"><a class="navlink" href="contact.html">Contact</a></li>
             <li id="gallery"><a class="navlink" href="gallery.html">Gallery</a></li>
@@ -25,6 +25,5 @@
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-    console.log("setting header to " + page + "...");
     SetHeader(page);
 </script>
