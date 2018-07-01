@@ -2,29 +2,8 @@
 </head>
 
 <body>
-    <div id="header" class="center">
-        <br/>
-        <img src="dragon.png" style="max-width: 200px; margin-bottom: -50px;"/>
-        <div id="title"><h1 style="margin-bottom: 0px;">The Doughy Dragon</h1></div>
-        <hr style="margin-bottom: 25px;">
 
-        <div id="nav">
-            <ul>
-                <li id="sellist"><a class="navlink" id="selected" href="index.html">Home</a></li>
-                <li><a class="navlink" href="about.html">About</a></li>
-                <li><a class="navlink" href="contact.html">Contact</a></li>
-                <li><a class="navlink" href="gallery.html">Gallery</a></li>
-                <li><a class="navlink" href="support.html">Support</a></li>
-            </ul>
-        </div>
-
-        <!--<div style="min-width: 200px; min-height: 200px; background-image: url('cake.png')"></div>-->
-
-
-        <br/>
-
-    </div>
-
+    <div w3-include-html="header.html"></div>
 
 
     <div style="margin-bottom: 100px"></div>
@@ -64,14 +43,13 @@
     }
 
     #nav ul {
-        min-height: 40px;
         text-align: center;
     }
 
     #nav ul li {
         display: inline-block;
-        padding: 40px 5%;
-        margin-top: -20px;
+        padding: 20px 5%;
+        //margin-top: -20px;
         list-style-type: none;
     }
 
@@ -86,13 +64,13 @@
     }
 
     #sellist {
-        background: url('cake.gif')!important;
-        background-size: 130px 110px!important;
+        background: url('cakeShadow.png')!important;
+        background-size: 100px 80px!important;
         background-repeat: no-repeat!important;
         background-position: center!important;
         background-clip: border-box!important;
 
-        padding: 60px 40px;
+        padding: 40px 40px;
         //margin: -20px -20px;
     }
 
@@ -129,3 +107,37 @@
     }
 
 </style>
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script>
+
+<script>
+includeHTML();
+</script>
