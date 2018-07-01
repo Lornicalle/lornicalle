@@ -6,8 +6,7 @@
     <script>
         $(function(){
           $("#includeHeader").load("header.html");
-        });
-        SetHeader("home");
+        });        
     </script>
 </head>
 
@@ -36,5 +35,5 @@
 
 
 <script>
-    //$(document).ready(SetHeader("home"));
+    $(window).on('load', SetHeader("home"));
 </script>
