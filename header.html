@@ -6,11 +6,11 @@
 
     <div id="nav">
         <ul>
-            <li id="sellist"><a class="navlink" id="selected" href="index.html">Home</a></li>
-            <li><a class="navlink" id="selected" href="about.html">About</a></li>
-            <li><a class="navlink" href="contact.html">Contact</a></li>
-            <li><a class="navlink" href="gallery.html">Gallery</a></li>
-            <li><a class="navlink" href="support.html">Support</a></li>
+            <li id="home"><a class="navlink" href="index.html">Home</a></li>
+            <li id="about"><a class="navlink" href="about.html">About</a></li>
+            <li id="contact"><a class="navlink" href="contact.html">Contact</a></li>
+            <li id="gallery"><a class="navlink" href="gallery.html">Gallery</a></li>
+            <li id="support"><a class="navlink" href="support.html">Support</a></li>
         </ul>
     </div>
 
@@ -20,3 +20,15 @@
     <br/>
 
 </div>
+
+<script>
+
+function SetHeader(name) {
+    if (name === "About") {
+        document.getElementById("about").id = "selected";
+    }
+
+
+
+}
+</script>
