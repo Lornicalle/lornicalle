@@ -28,13 +28,6 @@ function includeHTML() {
 
 
 function SetHeader(name) {
-
     console.log("setting header to " + name + "...");
-
-    if (name === "index") {
-        document.getElementById('index').id = 'sellist';
-    }
-    if (name === "about") {
-        document.getElementById('about').id = 'sellist';
-    }
+    document.getElementById(name).setAttribute("id", "sellist");
 }
