@@ -2,12 +2,19 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="jQuery.js"></script>
+
+    <script>
+        $(function(){
+          $("#includeHeader").load("header.html");
+        });
+    </script>
 </head>
 
 <body>
 
-    <div w3-include-html="header.html"></div>
-    <script> includeHTML(); </script>
+    <div id="includeHeader">
+
+    </div>
 
     <div style="margin-bottom: 100px"></div>
 
@@ -25,5 +32,5 @@
 
 
 <script>
-    $(document).ready(SetHeader("home"));
+    //$(document).ready(SetHeader("home"));
 </script>
